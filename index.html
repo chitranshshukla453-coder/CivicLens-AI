@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CivicLens AI | Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <a href="#" class="brand" aria-label="CivicLens AI Home">
+      <span class="brand-icon">⌖</span>
+      <span>Civic<span>Lens</span> AI</span>
+    </a>
+
+    <nav class="nav-links">
+      <a href="#" class="active">Home</a>
+      <a href="#map">Map</a>
+      <a href="#dashboard">Dashboard</a>
+      <a href="#about">About</a>
+    </nav>
+
+    <button class="btn btn-primary" id="reportBtn">Report Issue <span>→</span></button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">AI + GIS FOR SMARTER CIVIC INFRASTRUCTURE</p>
+
+        <h1>Civic<span>Lens</span> AI</h1>
+
+        <h2>Combined Civic Infrastructure<br />Mapping using AI &amp; GIS</h2>
+
+        <p class="tagline">
+          See the Problem <b>•</b> Map the Impact <b>•</b> Prioritize the Solution
+        </p>
+
+        <p class="hero-text">
+          An AI and GIS based platform to identify, map and analyze civic
+          infrastructure problems for cleaner, safer and smarter cities.
+        </p>
+
+        <div class="hero-actions">
+          <button class="btn btn-primary btn-large" id="heroReportBtn">
+            Report an Issue <span>→</span>
+          </button>
+          <button class="btn btn-outline btn-large" id="mapBtn">
+            Explore Civic Map
+          </button>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="map-bg">
+          <div class="road road-1"></div>
+          <div class="road road-2"></div>
+          <div class="city-block block-1"></div>
+          <div class="city-block block-2"></div>
+          <div class="city-block block-3"></div>
+          <div class="tree tree-1">🌳</div>
+          <div class="tree tree-2">🌳</div>
+          <div class="pin pin-1">📍</div>
+          <div class="pin pin-2">📍</div>
+          <div class="location-label">Greater Noida</div>
+        </div>
+
+        <div class="impact-card">
+          <div class="impact-icon">✓</div>
+          <div>
+            <strong>Smarter Cities</strong>
+            <span>Stronger Communities</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="Civic report summary">
+      <article class="stat-card">
+        <div class="stat-icon blue">▦</div>
+        <div><strong>157</strong><span>Total Reports</span></div>
+      </article>
+
+      <article class="stat-card">
+        <div class="stat-icon red">⌁</div>
+        <div><strong>52</strong><span>Potholes</span></div>
+      </article>
+
+      <article class="stat-card">
+        <div class="stat-icon orange">▣</div>
+        <div><strong>38</strong><span>Garbage</span></div>
+      </article>
+
+      <article class="stat-card">
+        <div class="stat-icon cyan">♢</div>
+        <div><strong>24</strong><span>Waterlogging</span></div>
+      </article>
+
+      <article class="stat-card">
+        <div class="stat-icon purple">⌁</div>
+        <div><strong>29</strong><span>Streetlights</span></div>
+      </article>
+
+      <article class="stat-card">
+        <div class="stat-icon yellow">!</div>
+        <div><strong>14</strong><span>Others</span></div>
+      </article>
+    </section>
+
+    <section class="quick-info" id="about">
+      <div>
+        <span class="section-label">HOW IT WORKS</span>
+        <h3>Report → Analyze → Map → Prioritize</h3>
+      </div>
+      <p>
+        Citizens provide a photo and location. CivicLens AI analyzes the
+        reported issue, places it on the GIS map and helps identify areas
+        that may need attention.
+      </p>
+    </section>
+
+    <section class="hidden-target" id="map"></section>
+    <section class="hidden-target" id="dashboard"></section>
+  </main>
+
+  <footer>
+    <span>© 2026 CivicLens AI</span>
+    <span>Greater Noida • Pilot Project</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

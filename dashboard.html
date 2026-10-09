@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | CivicLens AI</title>
+
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+
+    <!-- ==========================================
+         NAVBAR
+    =========================================== -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            CivicLens <span>AI</span>
+        </div>
+
+        <div class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="report.html">
+                Report Issue
+            </a>
+
+            <a href="map.html">
+                Map
+            </a>
+
+            <a href="dashboard.html" class="active">
+                Dashboard
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ==========================================
+         MAIN DASHBOARD
+    =========================================== -->
+
+    <main class="dashboard-container">
+
+
+        <!-- PAGE HEADING -->
+
+        <div class="page-heading">
+
+            <p class="small-title">
+                CIVICLENS AI
+            </p>
+
+            <h1>
+                Civic Infrastructure Dashboard
+            </h1>
+
+            <p>
+                Monitor reported civic issues and identify priority areas
+                using AI-powered analysis.
+            </p>
+
+        </div>
+
+
+
+        <!-- ==========================================
+             TOP STATISTICS
+        =========================================== -->
+
+        <div class="stats-grid">
+
+
+            <!-- TOTAL REPORTS -->
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    📊
+                </div>
+
+                <div>
+
+                    <p>
+                        Total Reports
+                    </p>
+
+                    <h2 id="totalReports">
+                        0
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- POTHOLES -->
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    🛣️
+                </div>
+
+                <div>
+
+                    <p>
+                        Potholes
+                    </p>
+
+                    <h2 id="potholesCount">
+                        0
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- GARBAGE -->
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    🗑️
+                </div>
+
+                <div>
+
+                    <p>
+                        Garbage
+                    </p>
+
+                    <h2 id="garbageCount">
+                        0
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- WATERLOGGING -->
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    💧
+                </div>
+
+                <div>
+
+                    <p>
+                        Waterlogging
+                    </p>
+
+                    <h2 id="waterloggingCount">
+                        0
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- STREETLIGHT -->
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    💡
+                </div>
+
+                <div>
+
+                    <p>
+                        Streetlights
+                    </p>
+
+                    <h2 id="streetlightsCount">
+                        0
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- HIGH PRIORITY -->
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    🚨
+                </div>
+
+                <div>
+
+                    <p>
+                        High Priority
+                    </p>
+
+                    <h2 id="highPriorityCount">
+                        0
+                    </h2>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ==========================================
+             DASHBOARD GRID
+        =========================================== -->
+
+        <div class="dashboard-grid">
+
+
+            <!-- ======================================
+                 ISSUE DISTRIBUTION
+            ======================================= -->
+
+            <div class="dashboard-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h2>
+                            Issue Distribution
+                        </h2>
+
+                        <p>
+                            Distribution of reported civic problems
+                        </p>
+
+                    </div>
+
+                    <span>
+                        📊
+                    </span>
+
+                </div>
+
+
+                <div class="bar-list">
+
+
+                    <!-- POTHOLES -->
+
+                    <div class="bar-item">
+
+                        <div class="bar-label">
+
+                            <span>
+                                Potholes / Roads
+                            </span>
+
+                            <span id="potholesBarCount">
+                                0
+                            </span>
+
+                        </div>
+
+                        <div class="bar-background">
+
+                            <div class="bar pothole-bar"
+                                 style="width: 0%;">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- GARBAGE -->
+
+                    <div class="bar-item">
+
+                        <div class="bar-label">
+
+                            <span>
+                                Garbage / Waste
+                            </span>
+
+                            <span id="garbageBarCount">
+                                0
+                            </span>
+
+                        </div>
+
+                        <div class="bar-background">
+
+                            <div class="bar garbage-bar"
+                                 style="width: 0%;">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- STREETLIGHT -->
+
+                    <div class="bar-item">
+
+                        <div class="bar-label">
+
+                            <span>
+                                Streetlights
+                            </span>
+
+                            <span id="streetlightsBarCount">
+                                0
+                            </span>
+
+                        </div>
+
+                        <div class="bar-background">
+
+                            <div class="bar streetlight-bar"
+                                 style="width: 0%;">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- WATERLOGGING -->
+
+                    <div class="bar-item">
+
+                        <div class="bar-label">
+
+                            <span>
+                                Water / Drainage
+                            </span>
+
+                            <span id="waterloggingBarCount">
+                                0
+                            </span>
+
+                        </div>
+
+                        <div class="bar-background">
+
+                            <div class="bar water-bar"
+                                 style="width: 0%;">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- OTHER -->
+
+                    <div class="bar-item">
+
+                        <div class="bar-label">
+
+                            <span>
+                                Other Issues
+                            </span>
+
+                            <span id="otherBarCount">
+                                0
+                            </span>
+
+                        </div>
+
+                        <div class="bar-background">
+
+                            <div class="bar other-bar"
+                                 style="width: 0%;">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ======================================
+                 PRIORITY OVERVIEW
+            ======================================= -->
+
+            <div class="dashboard-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h2>
+                            Priority Overview
+                        </h2>
+
+                        <p>
+                            AI-based severity classification
+                        </p>
+
+                    </div>
+
+                    <span>
+                        ⚠️
+                    </span>
+
+                </div>
+
+
+                <div class="priority-list">
+
+
+                    <!-- HIGH -->
+
+                    <div class="priority-item">
+
+                        <div>
+
+                            <strong>
+                                High Priority
+                            </strong>
+
+                            <p>
+                                Requires immediate attention
+                            </p>
+
+                        </div>
+
+                        <span id="highPriorityAI">
+                            0
+                        </span>
+
+                    </div>
+
+
+
+                    <!-- MEDIUM -->
+
+                    <div class="priority-item">
+
+                        <div>
+
+                            <strong>
+                                Medium Priority
+                            </strong>
+
+                            <p>
+                                Requires planned action
+                            </p>
+
+                        </div>
+
+                        <span id="mediumPriorityAI">
+                            0
+                        </span>
+
+                    </div>
+
+
+
+                    <!-- LOW -->
+
+                    <div class="priority-item">
+
+                        <div>
+
+                            <strong>
+                                Low Priority
+                            </strong>
+
+                            <p>
+                                Can be addressed routinely
+                            </p>
+
+                        </div>
+
+                        <span id="lowPriorityAI">
+                            0
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ======================================
+                 AI ANALYSIS SUMMARY
+            ======================================= -->
+
+            <div class="dashboard-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h2>
+                            AI Analysis Summary
+                        </h2>
+
+                        <p>
+                            Performance of CivicLens AI
+                        </p>
+
+                    </div>
+
+                    <span>
+                        🤖
+                    </span>
+
+                </div>
+
+
+                <div class="ai-summary">
+
+
+                    <!-- AI ANALYZED -->
+
+                    <div class="summary-item">
+
+                        <div>
+
+                            <strong>
+                                AI Analyzed Reports
+                            </strong>
+
+                            <p>
+                                Reports processed by AI
+                            </p>
+
+                        </div>
+
+                        <span id="aiAnalyzedCount">
+                            0
+                        </span>
+
+                    </div>
+
+
+
+                    <!-- CONFIDENCE -->
+
+                    <div class="summary-item">
+
+                        <div>
+
+                            <strong>
+                                Average AI Confidence
+                            </strong>
+
+                            <p>
+                                Average prediction confidence
+                            </p>
+
+                        </div>
+
+                        <span id="averageConfidence">
+                            0%
+                        </span>
+
+                    </div>
+
+
+
+                    <!-- PRIORITY -->
+
+                    <div class="summary-item">
+
+                        <div>
+
+                            <strong>
+                                Average Priority Score
+                            </strong>
+
+                            <p>
+                                Average civic priority
+                            </p>
+
+                        </div>
+
+                        <span id="averagePriority">
+                            0/100
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ======================================
+                 MOST AFFECTED AREAS
+            ======================================= -->
+
+            <div class="dashboard-card affected-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h2>
+                            Most Affected Areas
+                        </h2>
+
+                        <p>
+                            Areas with highest reported issues
+                        </p>
+
+                    </div>
+
+                    <span>
+                        📍
+                    </span>
+
+                </div>
+
+
+                <div class="area-list">
+
+
+                    <!-- AREA 1 -->
+
+                    <div class="area-item">
+
+                        <div>
+
+                            <strong id="areaName1">
+                                Zone 1
+                            </strong>
+
+                            <p>
+                                Greater Noida
+                            </p>
+
+                        </div>
+
+                        <span id="areaCount1">
+                            0 reports
+                        </span>
+
+                    </div>
+
+
+
+                    <!-- AREA 2 -->
+
+                    <div class="area-item">
+
+                        <div>
+
+                            <strong id="areaName2">
+                                Zone 2
+                            </strong>
+
+                            <p>
+                                Greater Noida
+                            </p>
+
+                        </div>
+
+                        <span id="areaCount2">
+                            0 reports
+                        </span>
+
+                    </div>
+
+
+
+                    <!-- AREA 3 -->
+
+                    <div class="area-item">
+
+                        <div>
+
+                            <strong id="areaName3">
+                                Zone 3
+                            </strong>
+
+                            <p>
+                                Greater Noida
+                            </p>
+
+                        </div>
+
+                        <span id="areaCount3">
+                            0 reports
+                        </span>
+
+                    </div>
+
+
+
+                    <!-- AREA 4 -->
+
+                    <div class="area-item">
+
+                        <div>
+
+                            <strong id="areaName4">
+                                Zone 4
+                            </strong>
+
+                            <p>
+                                Greater Noida
+                            </p>
+
+                        </div>
+
+                        <span id="areaCount4">
+                            0 reports
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ==========================================
+             DECISION SUPPORT
+        =========================================== -->
+
+        <div class="dashboard-card decision-card">
+
+            <div class="card-header">
+
+                <div>
+
+                    <h2>
+                        Decision Support
+                    </h2>
+
+                    <p>
+                        CivicLens AI helps authorities identify
+                        where action is most needed.
+                    </p>
+
+                </div>
+
+                <span>
+                    🧠
+                </span>
+
+            </div>
+
+
+            <div class="decision-content">
+
+
+                <div class="decision-box">
+
+                    <span>
+                        🤖
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            AI Detection
+                        </strong>
+
+                        <p>
+                            Automatically identifies civic issues
+                            from uploaded images.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="decision-box">
+
+                    <span>
+                        📍
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            GIS Mapping
+                        </strong>
+
+                        <p>
+                            Locates reported problems using
+                            geographic coordinates.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="decision-box">
+
+                    <span>
+                        📊
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Analytics
+                        </strong>
+
+                        <p>
+                            Analyses issue concentration and
+                            severity across areas.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="decision-box">
+
+                    <span>
+                        🚨
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Priority
+                        </strong>
+
+                        <p>
+                            Helps authorities prioritize
+                            high-impact civic problems.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </main>
+
+
+    <!-- ==========================================
+         JAVASCRIPT
+    =========================================== -->
+
+    <script src="dashboard.js"></script>
+
+</body>
+
+</html>

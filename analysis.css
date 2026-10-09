@@ -1,0 +1,504 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #1f2937;
+}
+
+
+/* Navbar */
+
+.navbar {
+    height: 70px;
+    background: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #2563eb;
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #374151;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+    color: #2563eb;
+}
+
+
+/* Main */
+
+.analysis-container {
+    width: 90%;
+    max-width: 1150px;
+    margin: 45px auto;
+}
+
+
+/* Heading */
+
+.page-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.small-title {
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.page-heading h1 {
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.page-heading p {
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+
+/* Layout */
+
+.analysis-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+
+/* Cards */
+
+.image-card,
+.result-card {
+    background: white;
+    border-radius: 18px;
+    padding: 25px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+}
+
+
+/* Image Header */
+
+.image-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+.image-header h2 {
+    font-size: 21px;
+}
+
+.status {
+    background: #dcfce7;
+    color: #15803d;
+
+    padding: 7px 12px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+/* Image */
+
+.image-preview {
+    height: 280px;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    background: #dbeafe;
+}
+
+.sample-image {
+    height: 100%;
+
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+
+    background:
+        linear-gradient(
+            145deg,
+            #dbeafe,
+            #bfdbfe
+        );
+}
+
+.sample-image p {
+    margin-top: 15px;
+    color: #475569;
+    font-size: 14px;
+}
+
+.pothole {
+    font-size: 70px;
+}
+
+
+/* Fake Road */
+
+.road {
+    position: absolute;
+
+    width: 100%;
+    height: 80px;
+
+    background: #64748b;
+
+    bottom: 0;
+
+    transform: rotate(-5deg);
+}
+
+
+/* Location */
+
+.location-info {
+    display: flex;
+
+    gap: 12px;
+
+    align-items: center;
+
+    margin-top: 20px;
+
+    padding: 15px;
+
+    background: #f8fafc;
+
+    border-radius: 10px;
+}
+
+.location-info > span {
+    font-size: 25px;
+}
+
+.location-info strong {
+    font-size: 14px;
+}
+
+.location-info p {
+    color: #6b7280;
+    margin-top: 4px;
+}
+
+
+/* AI Title */
+
+.ai-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+}
+
+.robot {
+    font-size: 40px;
+}
+
+.ai-title h2 {
+    margin-bottom: 4px;
+}
+
+.ai-title p {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+
+/* Result Item */
+
+.result-item {
+    margin-bottom: 22px;
+}
+
+.result-label {
+    display: block;
+
+    color: #6b7280;
+
+    font-size: 13px;
+
+    margin-bottom: 7px;
+}
+
+.result-item h3 {
+    font-size: 20px;
+}
+
+
+/* Confidence */
+
+.label-row {
+    display: flex;
+
+    justify-content: space-between;
+}
+
+.label-row strong {
+    color: #2563eb;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 9px;
+
+    background: #e5e7eb;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.progress {
+    width: 94%;
+    height: 100%;
+
+    background: #2563eb;
+}
+
+
+/* Severity */
+
+.severity-box {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 17px;
+
+    background: #fff7ed;
+
+    border-radius: 12px;
+
+    margin-bottom: 15px;
+}
+
+.severity-box h2 {
+    color: #ea580c;
+
+    margin-top: 4px;
+}
+
+.warning-icon {
+    font-size: 32px;
+}
+
+
+/* Priority */
+
+.priority-box {
+    padding: 17px;
+
+    background: #eff6ff;
+
+    border-radius: 12px;
+
+    margin-bottom: 20px;
+}
+
+.priority-box h2 {
+    color: #2563eb;
+
+    margin-bottom: 7px;
+}
+
+.priority-box p {
+    color: #4b5563;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+/* Buttons */
+
+.action-buttons {
+    display: flex;
+
+    gap: 10px;
+}
+
+.btn {
+    flex: 1;
+
+    padding: 13px;
+
+    border-radius: 9px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.btn.primary {
+    border: none;
+
+    background: #2563eb;
+
+    color: white;
+}
+
+.btn.primary:hover {
+    background: #1d4ed8;
+}
+
+.btn.secondary {
+    border: 1px solid #2563eb;
+
+    background: white;
+
+    color: #2563eb;
+}
+
+.btn.secondary:hover {
+    background: #eff6ff;
+}
+
+
+/* Process */
+
+.process-section {
+    margin-top: 35px;
+
+    background: white;
+
+    padding: 28px;
+
+    border-radius: 18px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+}
+
+.process-section h2 {
+    text-align: center;
+
+    margin-bottom: 25px;
+}
+
+.process-grid {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 15px;
+}
+
+.process-card {
+    text-align: center;
+
+    width: 170px;
+}
+
+.process-icon {
+    font-size: 30px;
+
+    margin-bottom: 8px;
+}
+
+.process-card h3 {
+    margin-bottom: 5px;
+}
+
+.process-card p {
+    color: #6b7280;
+
+    font-size: 13px;
+
+    line-height: 1.4;
+}
+
+.arrow {
+    font-size: 25px;
+
+    color: #9ca3af;
+}
+
+
+/* Mobile */
+
+@media (max-width: 850px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .analysis-container {
+        width: 94%;
+    }
+
+    .analysis-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .process-grid {
+        flex-direction: column;
+    }
+
+    .arrow {
+        transform: rotate(90deg);
+    }
+
+}
+
+@media (max-width: 550px) {
+
+    .page-heading h1 {
+        font-size: 30px;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+    }
+
+}

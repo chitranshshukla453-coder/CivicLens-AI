@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Analysis | CivicLens AI</title>
+
+    <link rel="stylesheet" href="analysis.css">
+    <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script>
+
+</head>
+
+
+<body>
+
+
+    <!-- Navbar -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            CivicLens <span>AI</span>
+        </div>
+
+        <div class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="report.html">
+                Report Issue
+            </a>
+
+            <a href="map.html">
+                Map
+            </a>
+
+            <a href="#" class="active">
+                AI Analysis
+            </a>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- Main Section -->
+
+    <main class="analysis-container">
+
+
+        <!-- Heading -->
+
+        <div class="page-heading">
+
+            <p class="small-title">
+                CIVICLENS AI
+            </p>
+
+            <h1>
+                AI Analysis Result
+            </h1>
+
+            <p>
+                CivicLens AI analyzes the reported image to identify
+                the civic issue and estimate its severity.
+            </p>
+
+        </div>
+
+
+
+        <!-- Analysis Layout -->
+
+        <div class="analysis-layout">
+
+
+            <!-- Image -->
+
+            <section class="image-card">
+
+                <div class="image-header">
+
+                    <h2>
+                        Reported Image
+                    </h2>
+
+                    <span class="status">
+                        AI Analyzed
+                    </span>
+
+                </div>
+
+
+               <div class="image-preview">
+
+    <div class="sample-image">
+
+        <img
+            id="uploadedReportImage"
+            src=""
+            alt="Uploaded Civic Issue Photo"
+            style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 12px;
+                display: none;
+            "
+        >
+
+        <div id="imagePlaceholder">
+
+            <div class="road"></div>
+
+            <div class="pothole">
+                🕳️
+            </div>
+
+            <p>
+                Uploaded Civic Issue Photo
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+                <div class="location-info">
+
+                    <span>
+                        📍
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Location
+                        </strong>
+
+                        <p id="reportLocation">
+                            Loading location...
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- AI Result -->
+
+            <section class="result-card">
+
+                <div class="ai-title">
+
+                    <div class="robot">
+                        🤖
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            AI Detection
+                        </h2>
+
+                        <p>
+                            Analysis completed
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Detected Issue -->
+
+                <div class="result-item">
+
+                    <span class="result-label">
+                        Detected Issue
+                    </span>
+
+                    <h3 id="detectedIssue">
+                        Analyzing...
+                    </h3>
+
+                </div>
+
+
+
+                <!-- Confidence -->
+
+                <div class="result-item">
+
+                    <div class="label-row">
+
+                        <span class="result-label">
+                            Detection Confidence
+                        </span>
+
+                        <strong id="confidenceValue">
+                            --
+                        </strong>
+
+                    </div>
+
+                    <div class="progress-bar">
+
+                        <div
+                            class="progress"
+                            id="confidenceProgress">
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Severity -->
+
+                <div class="severity-box">
+
+                    <div>
+
+                        <span class="result-label">
+                            Severity Level
+                        </span>
+
+                        <h2 id="severityValue">
+                            ANALYZING
+                        </h2>
+
+                    </div>
+
+                    <span class="warning-icon">
+                        ⚠️
+                    </span>
+
+                </div>
+
+
+
+                <!-- Priority -->
+
+                <div class="priority-box">
+
+                    <span class="result-label">
+                        Civic Priority
+                    </span>
+
+                    <h2 id="priorityValue">
+                        ANALYZING
+                    </h2>
+
+                    <p id="priorityDescription">
+                        CivicLens AI is calculating the priority of this report.
+                    </p>
+
+                </div>
+
+
+
+                <!-- Buttons -->
+
+                <div class="action-buttons">
+
+                    <button
+                        class="btn secondary"
+                        id="mapBtn"
+                    >
+                        📍 View on Map
+                    </button>
+
+                    <button
+                        class="btn primary"
+                        id="confirmBtn"
+                    >
+                        ✓ Confirm Report
+                    </button>
+
+                </div>
+
+
+            </section>
+
+
+        </div>
+
+
+
+        <!-- Analysis Process -->
+
+        <section class="process-section">
+
+            <h2>
+                How CivicLens AI Analyzed the Issue
+            </h2>
+
+
+            <div class="process-grid">
+
+
+                <div class="process-card">
+
+                    <div class="process-icon">
+                        📷
+                    </div>
+
+                    <h3>
+                        Image
+                    </h3>
+
+                    <p>
+                        Civic issue photo received
+                    </p>
+
+                </div>
+
+
+
+                <div class="arrow">
+                    →
+                </div>
+
+
+
+                <div class="process-card">
+
+                    <div class="process-icon">
+                        🤖
+                    </div>
+
+                    <h3>
+                        AI Detection
+                    </h3>
+
+                    <p>
+                        Problem category identified
+                    </p>
+
+                </div>
+
+
+
+                <div class="arrow">
+                    →
+                </div>
+
+
+
+                <div class="process-card">
+
+                    <div class="process-icon">
+                        ⚠️
+                    </div>
+
+                    <h3>
+                        Severity
+                    </h3>
+
+                    <p>
+                        Impact level estimated
+                    </p>
+
+                </div>
+
+
+
+                <div class="arrow">
+                    →
+                </div>
+
+
+
+                <div class="process-card">
+
+                    <div class="process-icon">
+                        📊
+                    </div>
+
+                    <h3>
+                        Priority
+                    </h3>
+
+                    <p>
+                        Action priority calculated
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- JavaScript -->
+
+    <script src="analysis.js"></script>
+
+
+</body>
+
+</html>

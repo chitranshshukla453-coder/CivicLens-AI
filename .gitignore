@@ -1,0 +1,29 @@
+
+# Python virtual environments
+.venv/
+.venv312/
+.venv313/
+civcenv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Local database and uploaded files
+backend/civiclens.db
+civiclens.db
+uploads/
+
+# Training datasets and archives
+dataset/
+ai_dataset/
+*.zip
+
+# Temporary model files
+*.pth
+*.onnx.data
+
+/civcenv/
+/civiclens_mini/
+
+/civcenv/

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Civic Issue Map | CivicLens AI</title>
+
+    <link rel="stylesheet" href="map.css">
+
+    <!-- Leaflet CSS -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    >
+
+    <!-- Marker Cluster CSS -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css"
+    >
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            CivicLens <span>AI</span>
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="report.html">Report Issue</a>
+            <a href="map.html" class="active">Map</a>
+            <a href="dashboard.html">Dashboard</a>
+        </div>
+
+    </nav>
+
+
+    <!-- ================= PAGE HEADER ================= -->
+
+    <main class="map-container">
+
+        <div class="page-heading">
+
+            <p class="small-title">
+                CIVICLENS AI
+            </p>
+
+            <h1>
+                Civic Issue Map
+            </h1>
+
+            <p>
+                Explore reported civic problems across Greater Noida
+                using AI-powered location intelligence.
+            </p>
+
+        </div>
+
+
+        <!-- ================= FILTERS ================= -->
+
+        <section class="filter-section">
+
+            <h3>
+                Filter Issues
+            </h3>
+
+            <div class="filter-options">
+
+                <label>
+                    <input
+                        type="checkbox"
+                        class="issue-filter"
+                        value="pothole"
+                        checked
+                    >
+                    🕳️ Potholes
+                </label>
+
+                <label>
+                    <input
+                        type="checkbox"
+                        class="issue-filter"
+                        value="garbage"
+                        checked
+                    >
+                    🗑️ Garbage
+                </label>
+
+                <label>
+                    <input
+                        type="checkbox"
+                        class="issue-filter"
+                        value="waterlogging"
+                        checked
+                    >
+                    💧 Waterlogging
+                </label>
+
+                <label>
+                    <input
+                        type="checkbox"
+                        class="issue-filter"
+                        value="streetlight"
+                        checked
+                    >
+                    💡 Streetlights
+                </label>
+
+                <label>
+                    <input
+                        type="checkbox"
+                        class="issue-filter"
+                        value="footpath"
+                        checked
+                    >
+                    🚶 Damaged Footpaths
+                </label>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= MAP ================= -->
+
+        <section class="map-box">
+
+            <div id="realMap"></div>
+
+
+            <!-- Legend -->
+
+            <div class="legend">
+
+                <h3>
+                    Map Legend
+                </h3>
+
+                <div class="legend-item">
+                    🕳️ Pothole
+                </div>
+
+                <div class="legend-item">
+                    🗑️ Garbage
+                </div>
+
+                <div class="legend-item">
+                    💧 Waterlogging
+                </div>
+
+                <div class="legend-item">
+                    💡 Streetlight
+                </div>
+
+                <div class="legend-item">
+                    🚶 Footpath
+                </div>
+
+            </div>
+
+
+            <!-- Issue count -->
+
+            <div class="issue-info">
+
+                <h3>
+                    Greater Noida
+                </h3>
+
+                <p id="issueCount">
+                    Loading reports...
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= LEAFLET ================= -->
+
+    <script
+        src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+    </script>
+
+
+    <!-- ================= MARKER CLUSTER ================= -->
+
+    <script
+        src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js">
+    </script>
+
+
+    <!-- ================= CIVICLENS MAP JS ================= -->
+
+    <script src="map.js"></script>
+
+</body>
+
+</html>

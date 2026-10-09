@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Report an Issue | CivicLens AI</title>
+
+    <link rel="stylesheet" href="report.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- Navigation Bar -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            CivicLens <span>AI</span>
+        </div>
+
+        <div class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="report.html" class="active">
+                Report Issue
+            </a>
+
+            <a href="map.html">
+                Map
+            </a>
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- Main Report Section -->
+
+    <main class="report-container">
+
+
+        <div class="page-heading">
+
+            <p class="small-title">
+                CIVICLENS AI
+            </p>
+
+            <h1>
+                Report a Civic Issue
+            </h1>
+
+            <p>
+                Help improve your city by reporting civic infrastructure
+                problems in your area.
+            </p>
+
+        </div>
+
+
+
+        <!-- Report Form -->
+
+        <section class="report-card">
+
+            <form id="reportForm">
+
+
+                <!-- Photo Upload -->
+
+                <div class="form-group">
+
+                    <label for="issuePhoto">
+                        📷 Upload Issue Photo
+                    </label>
+
+
+                    <div class="upload-box">
+
+                        <input
+                            type="file"
+                            id="issuePhoto"
+                            accept="image/jpeg,image/png,image/jpg"
+                            required
+                        >
+
+                        <p>
+                            Choose a photo of the civic problem
+                        </p>
+
+                        <small>
+                            JPG, PNG or JPEG — Maximum 5 MB
+                        </small>
+
+
+                        <!-- Image Preview -->
+
+                        <div id="imagePreviewContainer"
+                             style="display: none; margin-top: 15px;">
+
+                            <img
+                                id="imagePreview"
+                                src=""
+                                alt="Selected civic issue"
+                                style="
+                                    width: 100%;
+                                    max-height: 300px;
+                                    object-fit: cover;
+                                    border-radius: 12px;
+                                "
+                            >
+
+                            <p
+                                id="imageName"
+                                style="
+                                    margin-top: 8px;
+                                    font-weight: 600;
+                                "
+                            ></p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Location -->
+
+                <div class="form-group">
+
+                    <label for="location">
+                        📍 Location
+                    </label>
+
+
+                    <div class="location-row">
+
+                        <input
+                            type="text"
+                            id="location"
+                            placeholder="Enter location or use GPS"
+                            required
+                        >
+
+
+                        <button
+                            type="button"
+                            id="locationBtn"
+                        >
+                            Use My Location
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Category -->
+
+                <div class="form-group">
+
+                    <label for="category">
+                        🏷️ Problem Category
+                    </label>
+
+
+                    <select
+                        id="category"
+                        required
+                    >
+
+                        <option value="">
+                            Select problem type
+                        </option>
+
+
+                        <option value="pothole">
+                            Pothole / Damaged Road
+                        </option>
+
+
+                        <option value="garbage">
+                            Garbage Accumulation
+                        </option>
+
+
+                        <option value="waterlogging">
+                            Waterlogging / Drainage
+                        </option>
+
+
+                        <option value="streetlight">
+                            Broken Streetlight
+                        </option>
+
+
+                        <option value="footpath">
+                            Damaged Footpath
+                        </option>
+
+
+                        <option value="other">
+                            Other Civic Issue
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- Description -->
+
+                <div class="form-group">
+
+                    <label for="description">
+                        📝 Description
+                    </label>
+
+
+                    <textarea
+                        id="description"
+                        rows="5"
+                        placeholder="Describe the problem..."
+                    ></textarea>
+
+                </div>
+
+
+
+                <!-- AI Information -->
+
+                <div class="ai-info">
+
+                    <div class="ai-icon">
+                        🤖
+                    </div>
+
+
+                    <div>
+
+                        <h3>
+                            AI Analysis
+                        </h3>
+
+                        <p>
+                            After submission, CivicLens AI will analyze
+                            the reported issue and estimate its category
+                            and severity.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Submit Button -->
+
+                <button
+                    type="submit"
+                    class="submit-btn"
+                    id="submitReportBtn"
+                >
+                    🚀 Submit Report
+                </button>
+
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+
+    <script src="report.js"></script>
+
+
+</body>
+
+</html>
