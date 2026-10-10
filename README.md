@@ -18,6 +18,25 @@ CivicLens AI combines image-based AI classification, geographic mapping, and dat
 - **Interactive Dashboard:** Explore report counts, issue categories, and priority information.
 - **Analytics:** View category distributions, severity summaries, trends, and potential hotspots.
 - **Decision Support:** Help users understand which reported issues may deserve attention first.
+- ## Application Screenshots
+
+### Homepage
+![CivicLens AI Homepage](screenshorts/homepage.png)
+
+### Report Issue
+![Report Issue Form](screenshorts/Report%20Issue.png)
+
+### AI Analysis Result
+![AI Analysis Result](screenshorts/AI%20Analysis%20Result.png)
+
+### Civic Issue Map
+![Civic Issue Map](screenshorts/civic%20issue%20Map.png)
+
+### Dashboard
+![CivicLens Dashboard](screenshorts/Dashboard.png)
+
+### Analytics
+![CivicLens Analytics](screenshorts/Cicic%20Analytics.png)
 
 ## Technology Stack
 
