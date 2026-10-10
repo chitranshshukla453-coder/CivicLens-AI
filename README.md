@@ -95,7 +95,7 @@ CivicLens-AI/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/CivicLens-AI.git
+git clone https://github.com/chitranshshukla453-coder/CivicLens-AI.git
 cd CivicLens-AI
 ```
 
@@ -148,4 +148,4 @@ CivicLens AI aims to help citizens communicate local infrastructure issues and h
 
 ## License
 
-This project is intended to be released as open-source software. The repository license will specify the permissions for reuse and distribution.
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
